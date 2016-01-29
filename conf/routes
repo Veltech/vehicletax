@@ -1,0 +1,3 @@
+GET     /                                                       controllers.VehicleTaxController.index
+GET    /enquiry                                                 controllers.VehicleTaxController.getEnquiry
+POST    /result                                                  controllers.VehicleTaxController.displayResults

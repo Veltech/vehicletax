@@ -56,3 +56,5 @@ object VehicleTaxDetails{
     VehicleInformationResponse(displayDetails.number, displayDetails.make)
   }
 }
+
+object VehicleTaxController extends Controller with VehicleTaxController
