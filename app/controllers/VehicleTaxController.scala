@@ -1,5 +1,6 @@
 package controllers
 
+import dbaccess.services.DBConfig._
 import logging.Logging
 import play.api.mvc.{Action, Controller}
 
@@ -52,7 +53,7 @@ trait VehicleTaxController  extends Logging with VehicleTaxRequest{
 object VehicleTaxDetails{
   def find(vehicleInformationRequest: VehicleInformationRequest): VehicleInformationResponse = {
 
-    val displayDetails = models.VehicleTaxInformation(vehicleInformationRequest.number, vehicleInformationRequest.make)
+    val displayDetails = voaDao.fetchVehicleData(vehicleInformationRequest.number, vehicleInformationRequest.make)
     VehicleInformationResponse(displayDetails.number, displayDetails.make)
   }
 }

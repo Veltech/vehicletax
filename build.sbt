@@ -10,6 +10,9 @@ lazy val vehicletax = (project in file(".")).enablePlugins(PlayScala)
 libraryDependencies ++= {
   Seq(
     ws,
+    jdbc,
+    evolutions,
+    "com.typesafe.play" %% "anorm" % "2.4.0",
     "org.scala-lang" % "scala-library" % scalaVersion.value,
     "org.slf4j" % "slf4j-api" % "1.7.2",
     "ch.qos.logback" % "logback-classic" % "1.1.3",
